@@ -1,0 +1,7 @@
+fault_type,scenarios,detected_scenarios,mean_detected_rows,mean_detection_fraction,scenario_detection_rate
+bias,50,0,0.0,0.0,0.0
+drift,50,0,0.0,0.0,0.0
+missing,50,0,0.0,0.0,0.0
+normal,50,0,0.0,0.0,0.0
+spike,50,0,0.0,0.0,0.0
+stuck_sensor,50,0,0.0,0.0,0.0

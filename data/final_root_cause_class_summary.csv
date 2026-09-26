@@ -1,0 +1,7 @@
+fault_type,total,correct,mean_confidence,accuracy
+bias,10,9,0.5094697,0.9
+drift,10,7,0.61404073,0.7
+missing,10,10,0.8638811,1.0
+normal,10,3,0.45110273,0.3
+spike,10,7,0.6808782,0.7
+stuck_sensor,10,10,0.76046133,1.0

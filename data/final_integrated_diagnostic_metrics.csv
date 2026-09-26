@@ -1,0 +1,7 @@
+metric,value
+Test scenarios,60.0
+Root-cause accuracy,0.7666666666666667
+Root-cause macro F1,0.748582630819473
+Integrated accuracy,0.16666666666666666
+Integrated macro F1,0.047619047619047616
+Normal scenario false alarm rate,0.0

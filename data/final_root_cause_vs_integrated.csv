@@ -1,0 +1,3 @@
+system,accuracy,accuracy_percent
+Frozen V2 root-cause model,0.7666666666666667,76.66666666666667
+Integrated anomaly + root-cause system,0.16666666666666666,16.666666666666664
