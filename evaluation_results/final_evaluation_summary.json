@@ -1,0 +1,14 @@
+{
+    "system_name": "Integrated Diagnostic System (Anomaly Gatekeeper + Frozen Root-Cause Model)",
+    "evaluation_dataset": "Test Set Independent Evaluation",
+    "status": "Successfully Recalibrated and Evaluated",
+    "anomaly_detector_threshold": 0.3386,
+    "total_test_samples": 8647,
+    "total_anomalies_flagged": 432,
+    "frozen_model_version": "V2 Root-Cause Model (Frozen)",
+    "artifacts_saved": [
+        "integrated_confusion_and_detection_rates.png",
+        "system_accuracy_and_confidence_distribution.png",
+        "final_evaluation_summary.json"
+    ]
+}

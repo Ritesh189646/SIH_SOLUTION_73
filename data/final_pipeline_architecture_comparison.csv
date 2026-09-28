@@ -1,0 +1,4 @@
+Architecture,Accuracy,Description
+Standalone Root-Cause Classifier (V2),0.7666666666666667,Direct 6-class scenario classification using temporal features
+Strict Sequential Gating (Point Detector -> Classifier),0.43333333333333335,Point detector suppresses diagnosis if no instantaneous outlier is flagged
+Dual-Channel Arbitrated Pipeline,0.7666666666666667,Parallel fusion trusting high-confidence temporal faults + anomaly confirmation
