@@ -4,8 +4,8 @@
   "outputDirectory": "frontend/dist",
   "functions": {
     "api/index.py": {
-      "includeFiles": "data/**,Backend/**,src/**",
-      "excludeFiles": "frontend/**,notebooks/**,.conda/**,.venv/**,scratch/**,evaluation_results/*.png"
+      "includeFiles": "data/synthetic_fault_dataset.csv,data/fault_detection_results.csv,data/final_complete_test_diagnostics.csv,Backend/**,src/**",
+      "excludeFiles": "frontend/**,notebooks/**,.conda/**,.venv/**,scratch/**,evaluation_results/**,data/anomaly_results*.csv,data/merged_fault_anomaly_dataset.csv,data/engineered_weather.csv"
     }
   },
   "rewrites": [
