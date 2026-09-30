@@ -41,8 +41,16 @@ origins = [
 
 env_cors = os.getenv("CORS_ORIGINS")
 if env_cors:
-    additional_origins = [o.strip() for o in env_cors.split(",") if o.strip()]
-    origins.extend(additional_origins)
+    if env_cors.strip() == "*":
+        origins = ["*"]
+    else:
+        additional_origins = [o.strip() for o in env_cors.split(",") if o.strip()]
+        origins.extend(additional_origins)
+
+# Auto-detect Vercel environment origin
+vercel_url = os.getenv("VERCEL_URL")
+if vercel_url:
+    origins.append(f"https://{vercel_url}")
 
 app.add_middleware(
     CORSMiddleware,
