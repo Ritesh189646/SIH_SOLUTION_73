@@ -2,6 +2,12 @@
   "version": 2,
   "buildCommand": "npm --prefix frontend install && npm --prefix frontend run build",
   "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "data/**,Backend/**,src/**",
+      "excludeFiles": "frontend/**,notebooks/**,.conda/**,.venv/**,scratch/**,evaluation_results/*.png"
+    }
+  },
   "rewrites": [
     { "source": "/health", "destination": "/api/index.py" },
     { "source": "/stats", "destination": "/api/index.py" },

@@ -1,0 +1,7 @@
+# Exclude local environment and heavy unnecessary directories from Vercel deployments
+.conda/
+.venv/
+notebooks/
+scratch/
+.vscode/
+*.bat
