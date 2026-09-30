@@ -16,16 +16,12 @@ IF NOT EXIST "%PYTHON_EXE%" (
 )
 
 echo.
-echo [1/3] Launching FastAPI Backend (http://127.0.0.1:8000) ...
+echo [1/2] Launching FastAPI Backend (http://127.0.0.1:8000) ...
 start "SKYGUARD - FastAPI Backend" cmd /k ""%PYTHON_EXE%" -m uvicorn Backend.main:app --host 127.0.0.1 --port 8000 --reload"
 
 echo.
-echo [2/3] Launching React Enterprise Frontend (http://127.0.0.1:5173) ...
+echo [2/2] Launching React Enterprise Frontend (http://127.0.0.1:5173) ...
 start "SKYGUARD - React Frontend" cmd /k "cd frontend && npm run dev"
-
-echo.
-echo [3/3] Launching Legacy Streamlit Dashboard (http://127.0.0.1:8501) ...
-start "SKYGUARD - Streamlit Reference UI" cmd /k ""%PYTHON_EXE%" -m streamlit run dashboard/app.py"
 
 echo.
 echo Waiting for servers to start...
@@ -41,7 +37,6 @@ echo.
 echo - React Primary UI:     http://127.0.0.1:5173  (Login: admin / admin123)
 echo - FastAPI Backend:     http://127.0.0.1:8000
 echo - Swagger API Docs:    http://127.0.0.1:8000/docs
-echo - Legacy Streamlit UI: http://127.0.0.1:8501
 echo ============================================================
 echo Press any key to close launcher window.
 pause > nul
