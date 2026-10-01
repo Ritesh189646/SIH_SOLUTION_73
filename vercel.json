@@ -1,11 +1,14 @@
 {
-  "version": 2,
-  "buildCommand": "npm --prefix frontend install && npm --prefix frontend run build",
-  "outputDirectory": "frontend/dist",
-  "functions": {
-    "api/index.py": {
-      "includeFiles": "data/synthetic_fault_dataset.csv,data/fault_detection_results.csv,data/final_complete_test_diagnostics.csv,Backend/**,src/**",
-      "excludeFiles": "frontend/**,notebooks/**,.conda/**,.venv/**,scratch/**,evaluation_results/**,data/anomaly_results*.csv,data/merged_fault_anomaly_dataset.csv,data/engineered_weather.csv"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "frontend": {
+      "root": "frontend/",
+      "framework": "vite"
+    },
+    "backend": {
+      "root": "./",
+      "entrypoint": "api/index.py",
+      "framework": "fastapi"
     }
   },
   "rewrites": [

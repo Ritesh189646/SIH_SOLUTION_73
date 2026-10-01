@@ -48,7 +48,7 @@ const Dashboard = () => {
       setApiOnline(true);
     } catch (err) {
       console.error('Fetch dashboard error:', err);
-      setError('Unable to load telemetry stats from backend. Please ensure FastAPI server is running on http://127.0.0.1:8000');
+      setError('Unable to load telemetry stats from backend. Please ensure the API server is running.');
       setApiOnline(false);
     } finally {
       setLoading(false);

@@ -20,11 +20,17 @@ const System = () => {
       setLastCheck(new Date().toLocaleString());
     } catch (err) {
       console.error('System check error:', err);
-      setError('Backend API is unreachable at http://127.0.0.1:8000');
+      setError('Backend API is unreachable');
     } finally {
       setLoading(false);
     }
   };
+
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL !== undefined && import.meta.env.VITE_API_BASE_URL !== ''
+    ? import.meta.env.VITE_API_BASE_URL
+    : (import.meta.env.DEV ? 'http://127.0.0.1:8000' : (typeof window !== 'undefined' ? window.location.origin : ''));
+
+  const docsUrl = `${apiBaseUrl}/docs`;
 
   useEffect(() => {
     checkSystemStatus();
@@ -89,13 +95,13 @@ const System = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', fontSize: '0.85rem' }}>
           <div style={{ padding: '0.75rem', backgroundColor: '#f8fafc', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
             <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Backend Server URL</div>
-            <div style={{ fontWeight: 600, color: '#0f172a', marginTop: '0.2rem' }}>http://127.0.0.1:8000</div>
+            <div style={{ fontWeight: 600, color: '#0f172a', marginTop: '0.2rem' }}>{apiBaseUrl}</div>
           </div>
           <div style={{ padding: '0.75rem', backgroundColor: '#f8fafc', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
             <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Interactive Swagger Docs</div>
             <div style={{ fontWeight: 600, color: '#2563eb', marginTop: '0.2rem' }}>
-              <a href="http://127.0.0.1:8000/docs" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>
-                http://127.0.0.1:8000/docs
+              <a href={docsUrl} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>
+                {docsUrl}
               </a>
             </div>
           </div>
