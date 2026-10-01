@@ -1,6 +1,7 @@
 # Python / Virtual Environment
 .venv/
 .conda/
+venv/
 __pycache__/
 *.pyc
 *.pyo
