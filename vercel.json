@@ -12,18 +12,83 @@
     }
   },
   "rewrites": [
-    { "source": "/health", "destination": "/api/index.py" },
-    { "source": "/stats", "destination": "/api/index.py" },
-    { "source": "/analysis/run", "destination": "/api/index.py" },
-    { "source": "/data/upload", "destination": "/api/index.py" },
-    { "source": "/anomaly/results", "destination": "/api/index.py" },
-    { "source": "/classification/results", "destination": "/api/index.py" },
-    { "source": "/results", "destination": "/api/index.py" },
-    { "source": "/scenarios", "destination": "/api/index.py" },
-    { "source": "/scenarios/(.*)", "destination": "/api/index.py" },
-    { "source": "/docs", "destination": "/api/index.py" },
-    { "source": "/openapi.json", "destination": "/api/index.py" },
-    { "source": "/api/(.*)", "destination": "/api/index.py" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/health",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/stats",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/analysis/run",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/data/upload",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/anomaly/results",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/classification/results",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/results",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/scenarios",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/scenarios/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/docs",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/openapi.json",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "frontend"
+      }
+    }
   ]
 }
